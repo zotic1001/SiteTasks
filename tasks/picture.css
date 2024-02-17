@@ -1,0 +1,98 @@
+.picture {
+  position: relative;
+    display: block;
+    margin: 8% auto auto;
+    width: 200px;
+  height: 200px;
+  background: none;
+  border: solid 4px black;
+}
+.platform {
+    position: absolute;
+    height: 15%;
+    width: 80%;
+    margin-left: 10%;
+    bottom: 0;
+    background: linear-gradient(to right,
+    yellow 5%, #e6ab2b 5%,
+    #e6ab2b 15%, yellow 15%,
+    yellow 25%, #e6ab2b 25%,
+    #e6ab2b 35%, yellow 35%,
+    yellow 45%, #e6ab2b 45%,
+    #e6ab2b 55%, yellow 55%,
+    yellow 65%, #e6ab2b 65%,
+    #e6ab2b 75%, yellow 75%,
+    yellow 85%, #e6ab2b 85%,
+    #e6ab2b 95%, yellow 95%
+);
+    z-index: 3;
+}
+.grass1{
+
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: greenyellow;
+position: absolute;
+top:10%;
+left: 68% ;
+    transform: rotate(342deg);
+    z-index: 4;
+}
+.grass-cut1{
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: white;
+position: absolute;
+top:7%;
+left: 64%;
+    transform: rotate(342deg);
+    z-index: 4;
+}
+.grass2{
+
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: greenyellow;
+position: absolute;
+top:10%;
+left: 30% ;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+.grass-cut2{
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: white;
+position: absolute;
+top:8%;
+left: 34%;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+.grass3{
+
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: greenyellow;
+position: absolute;
+top:10%;
+left: 54% ;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+.grass-cut3{
+width: 15%;
+height: 80%;
+border-radius: 50% 50% 50% 50%;
+background-color: white;
+position: absolute;
+top:6%;
+left: 58%;
+    transform: rotate(15deg);
+    z-index: 4;
+}
