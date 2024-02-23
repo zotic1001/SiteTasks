@@ -1,12 +1,13 @@
 .picture {
-  position: relative;
+    position: relative;
     display: block;
     margin: 8% auto auto;
     width: 200px;
-  height: 200px;
-  background: none;
-  border: solid 4px black;
+    height: 200px;
+    background: none;
+    border: solid 4px black;
 }
+
 .platform {
     position: absolute;
     height: 15%;
@@ -24,75 +25,111 @@
     #e6ab2b 75%, yellow 75%,
     yellow 85%, #e6ab2b 85%,
     #e6ab2b 95%, yellow 95%
-);
+    );
     z-index: 3;
 }
-.grass1{
 
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: greenyellow;
-position: absolute;
-top:10%;
-left: 68% ;
+.grass1 {
+
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 10%;
+    left: 68%;
     transform: rotate(342deg);
     z-index: 4;
 }
-.grass-cut1{
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: white;
-position: absolute;
-top:7%;
-left: 64%;
+
+.grass-cut1 {
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: white;
+    position: absolute;
+    top: 7%;
+    left: 64%;
     transform: rotate(342deg);
     z-index: 4;
 }
-.grass2{
 
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: greenyellow;
-position: absolute;
-top:10%;
-left: 30% ;
-    transform: rotate(15deg);
-    z-index: 4;
-}
-.grass-cut2{
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: white;
-position: absolute;
-top:8%;
-left: 34%;
-    transform: rotate(15deg);
-    z-index: 4;
-}
-.grass3{
+.grass2 {
 
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: greenyellow;
-position: absolute;
-top:10%;
-left: 54% ;
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 10%;
+    left: 30%;
     transform: rotate(15deg);
     z-index: 4;
 }
-.grass-cut3{
-width: 15%;
-height: 80%;
-border-radius: 50% 50% 50% 50%;
-background-color: white;
-position: absolute;
-top:6%;
-left: 58%;
+
+.grass-cut2 {
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: white;
+    position: absolute;
+    top: 8%;
+    left: 34%;
     transform: rotate(15deg);
     z-index: 4;
+}
+
+.grass3 {
+
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 10%;
+    left: 54%;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+
+.grass-cut3 {
+    width: 15%;
+    height: 80%;
+    border-radius: 50% 50% 50% 50%;
+    background-color: white;
+    position: absolute;
+    top: 6%;
+    left: 58%;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+
+.fish {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 50px;
+    top: 80px;
+    transform: rotate(350deg);
+    z-index: 10;
+    background-color: #000;
+    border-radius: 50% 50%;
+}
+/* наконечник Стрелы */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #f00;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
