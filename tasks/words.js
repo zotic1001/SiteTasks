@@ -40,8 +40,12 @@ function refresh() {
 
 function splitString(string) {
     let rawArray = string.split('-');
-    let words_array = [];
-    let number_array = [];
+    var index = rawArray.indexOf('');
+    if (index !== -1) {
+        rawArray.splice(index, 1);
+    }
+    const words_array = new Array(0);
+    const number_array = new Array(0);
     for (let i = 0; i < rawArray.length; i++) {
         if (isNumber(rawArray[i])) {
             number_array.push(Number(rawArray[i]));
@@ -96,6 +100,8 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     var draggedElement = document.getElementById(data);
     draggedElement.style.display = "inline-block";
+    draggedElement.style.marginLeft = "20px";
+    draggedElement.style.width = "auto";
     if (event.target.classList.contains('block')) {
         var parent = event.target.parentNode;
         parent.insertBefore(draggedElement, event.target);
@@ -120,7 +126,6 @@ function drop(event) {
             clicks.set(draggedElement.innerText, (Number(clicks.get(draggedElement.innerText))) + 1);
         }
         clickCounterShow();
-        console.log(clicks)
     })
 }
 
@@ -131,7 +136,7 @@ function clickCounterShow() {
         clickArea.innerText += ` ${value} раз на элемент "${key}" и `
 
     }
-    clickArea.innerText = ` ${clickArea.innerText .substring(0, clickArea.innerText .length - 2)}`;
+    clickArea.innerText = ` ${clickArea.innerText.substring(0, clickArea.innerText.length - 2)}`;
 }
 
 document.addEventListener('dragover', function (event) {

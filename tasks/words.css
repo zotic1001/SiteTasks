@@ -13,11 +13,13 @@
     background-color: lightblue;
     margin-bottom: 10px;
     border: darkred 2px solid;
+
 }
 
 .aside {
-    width: 80%;
-    height: 10vh;
+    min-width: 80%;
+    min-height: 10vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
 
@@ -57,6 +59,7 @@
     margin-top: 20px;
     width: 20%;
     height: auto;
+    min-width: 100px;
 }
 
 .words {
