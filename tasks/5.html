@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Task 4</title>
+    <link rel="stylesheet" href="words.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header>
+    <div class="logo">
+        <div class="head">
+            <div class="nose"></div>
+            <div class="eye-left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye-right">
+                <div class="pupil"></div>
+            </div>
 
+        </div>
+    </div>
+    <ul class="menu">
+        <li></li>
+        <li class="menu-item"><a href="../index.html">Меню</a></li>
+        <li class="menu-item"><a href="../course.html">Курсовая работа</a></li>
+        <li class="menu-item"><a href="../tasks.html">Задания</a></li>
+        <li class="menu-item"><a href="../about.html">Обо мне</a></li>
+        <li class="menu-item"><a href="../contacts.html">Контакты</a></li>
+    </ul>
+</header>
+<main>
+    <div style="text-align: center;"><h1> Слова </h1></div>
+    <div class="dynamicElem" id="dynamicElem">
+        <div class="upper-menu" id="upper" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+        <div class="aside">
+            <div class="side-menu" id="side">
+
+            </div>
+            <div class="input-menu">
+                <label>
+                    <input class="text-input" type="text" id="text">
+                    <input class="submit" type="submit" id="submit" value="Разобрать">
+                </label>
+                <div class="words">
+                    <p id="textArea"></p>
+                </div>
+                <div class="clickCounters" id="clickCounter">
+                </div>
+            </div>
+        </div>
+        <script src="words.js"></script>
+    </div>
+</main>
+<footer>
+    <div class="footer-text">Студент СПБПУ 2024</div>
+</footer>
 </body>
 </html>

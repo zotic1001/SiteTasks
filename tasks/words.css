@@ -1,0 +1,93 @@
+.dynamicElem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.upper-menu {
+    width: 80%;
+    min-height: 10vh;
+    height: auto;
+    background-color: lightblue;
+    margin-bottom: 10px;
+    border: darkred 2px solid;
+}
+
+.aside {
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.side-menu {
+    min-width: 25vw;
+    width: auto;
+    min-height: 40vh;
+    height: auto;
+    border: black 2px solid;
+    align: center;
+}
+
+.input-menu {
+    min-width: 50vw;
+    min-height: 40vh;
+    height: auto;
+    width: auto;
+    border: black 2px solid;
+}
+
+.text-input {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 60%;
+
+    margin-top: 5%;
+    height: auto;
+    margin-left: 10%;
+    border: black 3px solid;
+}
+
+.submit {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 20%;
+    height: auto;
+}
+
+.words {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: red 3px solid;
+    width: 60%;
+    margin-top: 5%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.block {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    width: 10vw;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.clickCounters {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 60%;
+    margin-top: 5%;
+    height: auto;
+    padding: 10px;
+    margin-left: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
