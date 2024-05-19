@@ -1,8 +1,8 @@
 #game_board {
     display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 /* Стили для строки SVG */
 .svg-row {
     display: flex;
@@ -11,15 +11,16 @@
     align-items: center; /* Выравнивание элементов по центру */
     margin-bottom: 10px; /* Расстояние между строками */
 }
-
+.game_item {
+    height: 80px;
+    width: 80px;
+}
 /* Стили для элемента SVG */
 svg {
     pointer-events: none;
     margin: 40px; /* Расстояние между SVG элементами */
 }
 g {
-    width: 200px;
-    height: 200px;
     pointer-events: none;
 }
 path {

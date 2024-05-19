@@ -137,7 +137,7 @@ function handleSVGClick(event) {
 function resetGame() {
     if (gameMode == "number") {
         basePoint = settings.number.basePoint;
-        defaultRoundTime = settings.number.basePoint;
+        defaultRoundTime = settings.number.defaultRoundTime;
     }
     if (gameMode == "color") {
         basePoint = settings.color.basePoint;
