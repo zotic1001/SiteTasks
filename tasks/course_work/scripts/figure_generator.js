@@ -108,7 +108,7 @@ function shuffle_items(count) {
 
 
 function fillGameBoard() {
-    let svgs = shuffle_items(20);
+    let svgs = shuffle_items(16);
     for (var i = 0; i < svgs.length; i ++) {
     svgs[i].svg.classList.add("figure" + svgs[i].type);
     svgs[i].svg.classList.add("color" + svgs[i].color);
