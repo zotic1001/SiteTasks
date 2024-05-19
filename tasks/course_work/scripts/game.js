@@ -149,6 +149,7 @@ function resetGame() {
     }
     current_number = 1;
     current_correct_elements = [0,0,0,0,0,0,0,0,0];
+    currentRoundTime = defaultRoundTime;
     document.getElementById('correct-item').style.visibility = "hidden";
     document.getElementById("correct-item").style.height = "0";
     gameActive = false;
@@ -160,6 +161,8 @@ function resetGame() {
     while ( game_div.firstChild ) game_div.removeChild( game_div.firstChild );
     document.getElementById("auth_div").style.visibility = "visible";
     document.getElementById("auth_div").style.height = "auto";
+    document.getElementById("stats-btn-div").style.visibility = "visible";
+    document.getElementById("stats-btn-div").style.height = "auto";
 }
 
 function startTimer() {
@@ -221,6 +224,8 @@ function startRound() {
     startTimer();
     document.getElementById("auth_div").style.visibility = "hidden";
     document.getElementById("auth_div").style.height = "0";
+    document.getElementById("stats-btn-div").style.visibility = "hidden";
+    document.getElementById("stats-btn-div").style.height = "0";
     var svgElements = document.querySelectorAll('.game_item');
     svgElements.forEach(function(element) {
         element.addEventListener('click', handleSVGClick);

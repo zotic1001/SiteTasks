@@ -107,12 +107,10 @@ p {
     color: rgb(156, 163, 175);
 }
 .stats-btn-div {
-    margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
 }
 .stats-item {
     border: 1px solid #ccc;
