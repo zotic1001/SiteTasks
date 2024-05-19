@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Course Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<header>
+    <div class="logo">
+        <div class="head">
+            <div class="nose"></div>
+            <div class="eye-left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye-right">
+                <div class="pupil"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+        <li></li>
+        <li class="menu-item"><a href="../../index.html">Меню</a></li>
+        <li class="menu-item"><a href="index.html">Курсовая работа</a></li>
+        <li class="menu-item"><a href="../../tasks.html">Задания</a></li>
+        <li class="menu-item"><a href="../../about.html">Обо мне</a></li>
+        <li class="menu-item"><a href="../..contacts.html">Контакты</a></li>
+    </ul>
+</header>
+<body>
+    
+<div id="stats-result" class="stats-result"><h1>Результаты игроков</h1><div class="stats-btn-div"><a class="stats" href="index.html" style="margin: auto;"><button type="button" class="btn btn-success btn-lg">К игре</button></a></div>
+    <script>
+        function logMapElements(value, key, map) {
+            console.log(`m[${key}] = ${value}`);
+        }
+        const items = { ...localStorage };
+        const statsResult = document.getElementById('stats-result');
+        let sortable = [];
+        for (var item in items) {
+            sortable.push([item, items[item]]);
+        }
+        sortable.sort(function(a, b) {
+            return a[1] - b[1];
+        });
+        sortable.reverse();
+        sortable = sortable.slice(0, 10);
+        for (const key in sortable) {
+            const statsItem = document.createElement('div');
+            statsItem.classList.add('stats-item');
+            const user_name = document.createElement('div');
+            user_name.classList.add("user_name");
+            user_name.innerHTML = `${sortable[key][0]}`;
+            const user_stat = document.createElement('div');
+            user_stat.classList.add("user-stat");
+            user_stat.innerHTML = `${sortable[key][1]}`;
+            statsItem.appendChild(user_name);
+            statsItem.appendChild(user_stat);
+            statsResult.appendChild(statsItem);
+        }
+    </script>
+</body>
+<footer>
+    <div class="footer-text">Студент СПБПУ 2024</div>
+</footer>
+</html>

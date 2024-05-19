@@ -94,7 +94,7 @@ function markQuestion(questionIndex, marker) {
 }
 function removeAnswerList(answersList) {
     answersList.style.transition = "transform 2s, opacity 2s";
-    answersList.style.transform = "translateY(2000%)";
+    answersList.style.transform = "translateX(-2000%) translateY(-2000%)";
     setTimeout(function() {
         answersList.remove();
     }, 1000);

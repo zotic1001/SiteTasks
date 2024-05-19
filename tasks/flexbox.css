@@ -14,8 +14,11 @@
 
 .animated:hover .primitive {
     opacity: 100%;
+    transform: scale(1)
 }
-
+.flexbox:hover {
+    transform: scale(2)
+}
 .letter-p {
     fill: black;
     stroke: black;
