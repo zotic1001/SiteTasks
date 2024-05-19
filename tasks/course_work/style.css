@@ -110,7 +110,6 @@ p {
     display: flex;
   justify-content: center;
   align-items: center;
-  height: 200vh;
 }
 .stats-item {
     border: 1px solid #ccc;

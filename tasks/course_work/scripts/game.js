@@ -56,7 +56,7 @@ function show_correct_item_hide() {
         div.innerHTML = htmlString.trim();
         document.getElementById('correct-item').appendChild(div);
     }
-    if (gameMode == "colors") {
+    if (gameMode == "color") {
         document.getElementById('correct-item').innerHTML = '<h3>Нужно нажать на все фигруры такого цвета</h3>';
         correctClass = colors[Math.floor(Math.random()*figures.length)];
         let htmlString = figuresPath["square"].replaceAll("$$$$", "").replaceAll("####", "#" + correctClass);
@@ -98,7 +98,6 @@ function handleSVGClick(event) {
                     if (currentRoundTime < defaultRoundTime / 2) {
                         console.log(currentRoundsCount);
                         alert("Вы прошли уровень");
-
                         localStorage.setItem(currentUser, Math.max(localStorage.getItem(currentUser), currentRoundsCount*basePoint));
                         currentRoundsCount = 0;
                         resetGame();
@@ -127,6 +126,7 @@ function handleSVGClick(event) {
                 }
             }
         } else {
+            
             alert('Игра завершена! Вы нажали на неверный элемент. Ваш результат '  + currentRoundsCount*basePoint);
             localStorage.setItem(currentUser, Math.max(localStorage.getItem(currentUser), currentRoundsCount*basePoint));
             currentRoundsCount = 0;
@@ -141,11 +141,11 @@ function resetGame() {
     }
     if (gameMode == "color") {
         basePoint = settings.color.basePoint;
-        defaultRoundTime = settings.color.basePoint
+        defaultRoundTime = settings.color.defaultRoundTime
     }
     if (gameMode == "figure") {
         basePoint = settings.figure.basePoint;
-        defaultRoundTime = settings.figure.basePoint
+        defaultRoundTime = settings.figure.defaultRoundTime
     }
     current_number = 1;
     current_correct_elements = [0,0,0,0,0,0,0,0,0];
@@ -172,8 +172,11 @@ function startTimer() {
     gameActive = true;
     current_timer = setTimeout(function() {
         if (!checkCompletion()) {
+            console.log(defaultRoundTime);
+            console.log(currentRoundTime);
             alert('Игра завершена! Время истекло. Ваш результат ' + currentRoundsCount*basePoint);
             localStorage.setItem(currentUser, Math.max(localStorage.getItem(currentUser), currentRoundsCount*basePoint));
+            currentRoundTime = defaultRoundTime;
             currentRoundsCount = 0;
             resetGame();
         }
