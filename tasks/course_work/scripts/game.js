@@ -163,6 +163,9 @@ function resetGame() {
     document.getElementById("auth_div").style.height = "auto";
     document.getElementById("stats-btn-div").style.visibility = "visible";
     document.getElementById("stats-btn-div").style.height = "auto";
+    
+    document.getElementById("levels").style.visibility = "visible";
+    document.getElementById("levels").style.height = "auto";
 }
 
 function startTimer() {
@@ -229,6 +232,8 @@ function startRound() {
     document.getElementById("auth_div").style.height = "0";
     document.getElementById("stats-btn-div").style.visibility = "hidden";
     document.getElementById("stats-btn-div").style.height = "0";
+    document.getElementById("levels").style.visibility = "hidden";
+    document.getElementById("levels").style.height = "0";
     var svgElements = document.querySelectorAll('.game_item');
     svgElements.forEach(function(element) {
         element.addEventListener('click', handleSVGClick);

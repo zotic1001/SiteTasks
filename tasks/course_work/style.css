@@ -58,8 +58,8 @@ body {
   padding: 10px;
 }
 .example_item {
-  height: auto;
-  margin-bottom: 0;
+    margin: auto;
+    width: 50%;
 }
 main {
     background-color: white;
