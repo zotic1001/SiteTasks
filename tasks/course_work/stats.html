@@ -34,6 +34,25 @@
 <body>
     
 <div id="stats-result" class="stats-result"><h1>Результаты игроков</h1><div class="stats-btn-div"><a class="stats" href="index.html" style="margin: auto;"><button type="button" class="btn btn-success btn-lg">К игре</button></a></div>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    const key = "_tb_global_settings";
+    let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    try {
+        const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;
+        if (storageTheme) {
+            theme = storageTheme === "dark" ? "dark" : "light";
+        }
+    } catch (e) {
+    }
+    if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+    }
+    </script>
     <script>
         function logMapElements(value, key, map) {
             console.log(`m[${key}] = ${value}`);

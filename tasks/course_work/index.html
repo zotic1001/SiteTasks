@@ -32,22 +32,41 @@
     </ul>
 </header>
 <body>
-<h2 class="title">Игра выбери фигуры</h2>
+    <h2 class="title">Игра выбери фигуры</h2>
+    <p id="movingElement">
+        Игра представляет собой захватывающее испытание реакции и внимательности, где игроку необходимо выбирать нужные фигуры из предложенного набора за отведенное время. Сложность игры заключается в том, что фигуры могут быть разного цвета, формы и размера, и игрок должен быстро и точно определить правильные варианты. Время ограничено, что добавляет динамики и напряжения, заставляя игрока действовать быстро и решительно. С каждым новым уровнем увеличивается количество и разнообразие фигур, а также уменьшается время на их выбор, что делает игру все более захватывающей и вызывающей азарт. Визуальные эффекты и анимации создают увлекательную атмосферу, а разнообразие уровней сложности позволяет каждому игроку наслаждаться игрой в соответствии с его уровнем навыков и предпочтений.
+    </p>
 
-<div id="correct-item" style="visibility: hidden;" class="example_item">
-    
-</div>
-<div id="auth_div" class="auth"><h3>Введите имя</h3>
-    <input type="text" id="name_input"></div>
-<div id="game_board"></div>
-<div id="levels" class="lvl-buttons">
-    <button type="button" id="level1-btn" class="btn btn-primary btn-lg">Уровень 1</button>
-    <button type="button" id="level2-btn" class="btn btn-primary btn-lg">Уровень 2</button>
-    <button type="button" id="level3-btn" class="btn btn-primary btn-lg">Уровень 3</button>
+<div id="levels" class="lvl-buttons"><a class="stats" href="levels.html" style="margin: auto;"><button type="button" class="btn btn-success btn-lg">Уровни</button></a>
 </div>
 <div id="stats-btn-div" class="stats-btn-div"><a class="stats" href="stats.html" style="margin: auto;"><button type="button" class="btn btn-success btn-lg">Показать статистику</button></a>
 </div>
+
 <script>
+const movingElement = document.getElementById('movingElement');
+
+movingElement.addEventListener('mousedown', startDragging);
+
+function startDragging(event) {
+  let shiftX = event.clientX - movingElement.getBoundingClientRect().left;
+  let shiftY = event.clientY - movingElement.getBoundingClientRect().top;
+  
+  document.addEventListener('mousemove', moveElement);
+  document.addEventListener('mouseup', stopDragging);
+
+  function moveElement(event) {
+    let newX = event.clientX - shiftX;
+    let newY = event.clientY - shiftY;
+    
+    movingElement.style.left = newX + 'px';
+    movingElement.style.top = newY + 'px';
+  }
+
+  function stopDragging() {
+    document.removeEventListener('mousemove', moveElement);
+    document.removeEventListener('mouseup', stopDragging);
+  }
+}
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     const key = "_tb_global_settings";
     let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -66,10 +85,6 @@
         document.documentElement.classList.remove("dark");
     }
 </script>
-<script src="scripts/figure_generator.js"></script>
-<script src="scripts/game.js"></script>
-<script src="scripts/levels/level1.js"></script>
-
 </body>
 <footer>
     <div class="footer-text">Студент СПБПУ 2024</div>

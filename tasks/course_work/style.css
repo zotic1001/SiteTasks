@@ -96,12 +96,21 @@ p {
     margin: 0 auto;
 }
 
-.dark main {
+.dark body {
     background-color: rgb(11, 15, 25);
 }
 
 .dark h1 {
     color: rgb(209, 213, 219);
+}
+.dark h2 {
+    color: rgb(209, 213, 219);
+}
+.dark h3 {
+    color: rgb(209, 213, 219);
+}
+.dark text {
+    fill: #3E4847;
 }
 
 .dark p {
@@ -131,4 +140,12 @@ p {
   
   .user-stat {
     margin-top: 5px;
+  }
+  #movingElement {
+    font-family: Impact, fantasy;
+    position: absolute;
+    border: 3px solid #000000;
+    top:70%; /* Начальное положение сверху */
+    left: 50%; /* Начальное положение слева */
+    transform: translate(-50%, -50%); /* Центрирование элемента по центру */
   }
