@@ -30,7 +30,7 @@ var settings = {
 function checkCompletion() {
     if (gameMode == "number") {
 
-        if (current_number == 10) {
+        if (current_number == 9) {
             return true;
         }
         return false;
