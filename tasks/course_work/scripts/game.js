@@ -63,7 +63,7 @@ function show_correct_item_hide() {
         document.getElementById('correct-item').appendChild(div);
     }
     if (gameMode == "number") {
-        document.getElementById('correct-item').innerHTML = '<h3>Нужно нажимать цифры по неубыванию</h3>';
+        document.getElementById('correct-item').innerHTML = '<h3>Нужно нажимать цифры по неубыванию</h3><p>Стрелки влево-вправо можно выбирать элементы, Enter подтведить нажатие.</p>';
     }
 }
 function check_number_clicked_correct(clickedElement) {
