@@ -12,7 +12,9 @@ var currentRoundsCount = 0;
 var basePoint = 2;
 var current_timer = null;
 var current_number = 1;
+var current_max_number = 9;
 var current_correct_elements = [0,0,0,0,0,0,0,0,0];
+var maxIndex = -1;
 var settings = {
     number: {basePoint: 4,
         defaultRoundTime: 50000, 
@@ -28,15 +30,13 @@ var settings = {
 
 // Функция для проверки, нажаты ли все элементы с классом "correct"
 function checkCompletion() {
-    if (gameMode == "number") {
-
-        if (current_number == 10) {
-            return true;
-        }
-        return false;
-    }
+    
     
     var correctElements = document.querySelectorAll("." + gameMode + correctClass);
+    if (gameMode == "number") {
+        var correctElements = document.querySelectorAll(".game_item");
+        console.log(correctElements);
+    }
     var allCorrect = true;
     correctElements.forEach(function(element) {
         if (!element.classList.contains('clicked')) {
@@ -70,6 +70,12 @@ function show_correct_item_hide() {
 }
 function check_number_clicked_correct(clickedElement) {
     if (gameMode == "number") {
+        var maxIndex = -1;
+        for (var i = 0; i < current_correct_elements.length; i++) {
+            if (current_correct_elements[i] !== 0) {
+                maxIndex = i;
+            }
+        }
         let correctElements = document.querySelectorAll("." + gameMode + current_number.toString());
         while (correctElements.length - current_correct_elements[current_number] == 0) {
             current_number++; 
@@ -89,6 +95,7 @@ function handleSVGClick(event) {
         clickedElement.classList.add('clicked');
         if (gameMode == "number") {
             if (check_number_clicked_correct(clickedElement)) {
+                console.log(current_number);
                 if (checkCompletion()) {
                     alert('Следующий раунд');
                     currentRoundsCount++;
