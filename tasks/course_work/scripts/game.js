@@ -15,6 +15,7 @@ var current_number = 1;
 var current_max_number = 9;
 var current_correct_elements = [0,0,0,0,0,0,0,0,0];
 var maxIndex = -1;
+var selectedIndex = 0;
 var settings = {
     number: {basePoint: 4,
         defaultRoundTime: 50000, 
@@ -85,6 +86,26 @@ function check_number_clicked_correct(clickedElement) {
         return false;
     }
 }
+document.addEventListener('keydown', function(event) {
+        // Предполагаем, что selectedIndex уже определен и имеет начальное значение
+        const maxIndex = 15; // Максимальное значение для selectedIndex
+if (event.key === 'ArrowRight') {
+document.querySelectorAll('.game_item')[selectedIndex].classList.remove("selected");
+selectedIndex = (selectedIndex + 1) % (maxIndex + 1);
+console.log(selectedIndex);
+elementToClick = document.querySelectorAll('.game_item')[selectedIndex].classList.add("selected");
+} else if (event.key === 'ArrowLeft') {
+document.querySelectorAll('.game_item')[selectedIndex].classList.remove("selected");
+selectedIndex = (selectedIndex - 1 + maxIndex + 1) % (maxIndex + 1);
+elementToClick = document.querySelectorAll('.game_item')[selectedIndex].classList.add("selected");
+} else if (event.key === 'Enter') {
+          // Предполагаем, что у вас есть элемент, который вы хотите кликнуть
+          var elementToClick = document.querySelectorAll('.game_item')[selectedIndex];
+          elementToClick.click();
+          console.log(selectedIndex);
+        }
+      });
+
 // Функция для обработки кликов на элементах SVG
 function handleSVGClick(event) {
     if (gameActive) {

@@ -39,6 +39,9 @@ svg text {
 .clicked {
     background-color: rgba(39, 39, 39, 0.459);
 }
+.selected {
+    background-color: rgba(161, 39, 39, 0.459);
+}
 .title {
     text-align: center;
 }
