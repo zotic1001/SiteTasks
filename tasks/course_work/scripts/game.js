@@ -30,12 +30,9 @@ var settings = {
 
 // Функция для проверки, нажаты ли все элементы с классом "correct"
 function checkCompletion() {
-    
-    
     var correctElements = document.querySelectorAll("." + gameMode + correctClass);
     if (gameMode == "number") {
         var correctElements = document.querySelectorAll(".game_item");
-        console.log(correctElements);
     }
     var allCorrect = true;
     correctElements.forEach(function(element) {
