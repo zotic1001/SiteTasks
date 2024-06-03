@@ -149,3 +149,14 @@ p {
     left: 50%; /* Начальное положение слева */
     transform: translate(-50%, -50%); /* Центрирование элемента по центру */
   }
+  @keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .div-to-rotate {
+    animation: rotate-clockwise 2s linear infinite;
+  }

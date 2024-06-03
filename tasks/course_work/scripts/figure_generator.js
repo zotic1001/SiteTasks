@@ -114,6 +114,9 @@ function fillGameBoard() {
     svgs[i].svg.classList.add("color" + svgs[i].color);
     svgs[i].svg.classList.add("number" + svgs[i].number);
     svgs[i].svg.classList.add("game_item");
+    if (gameMode == "color") {
+        svgs[i].svg.classList.add("div-to-rotate");
+    }
     game_div.appendChild(svgs[i].svg);
 }
 }
